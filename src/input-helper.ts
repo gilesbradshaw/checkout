@@ -22,7 +22,7 @@ export async function getInputs(): Promise<IGitSourceSettings> {
     core.getInput('repository') ||
     `${github.context.repo.owner}/${github.context.repo.repo}`
   core.debug(`qualified repository = '${qualifiedRepository}'`)
-  console.log('it got here!!!!!!!') // eslint-disable-line no-console
+  console.log(`it got here!!!!!!!   ${qualifiedRepository}`) // eslint-disable-line no-console
   const splitRepository = qualifiedRepository.split('/')
   if (
     splitRepository.length !== 2 ||
